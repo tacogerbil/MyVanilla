@@ -1,4 +1,3 @@
-#vib
 name: DDS_ThinBox # Replace this name with your image name
 id: DDS_ThinBox # Replace this ID with your image ID
 stages:

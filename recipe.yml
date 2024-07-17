@@ -1,5 +1,5 @@
-name: DDS_ThinBox # Replace this name with your image name
-id: DDS_ThinBox # Replace this ID with your image ID
+name: dds_thinbox # Replace this name with your image name
+id: ds_thinbox # Replace this ID with your image ID
 stages:
 - id: build
   base: ghcr.io/vanilla-os/desktop:main # Optionally, Replace this image URL with a different one i.e. nvidia:main, etc

@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  CUSTOM_IMAGE_NAME: DDS_ThinBox
+  CUSTOM_IMAGE_NAME: dds_thinBox
   BUILDX_NO_DEFAULT_ATTESTATIONS: 1
 
 jobs:

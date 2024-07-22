@@ -37,7 +37,7 @@ stages:
     - "apt install -y workspacesclient"
     - "apt install -y fastfetch"
     - "apt install -y microsoft-edge-stable"
-    - "apt install -y intune-portal"
+    #- "apt install -y intune-portal"
 
   # Put your custom actions before this comment
 

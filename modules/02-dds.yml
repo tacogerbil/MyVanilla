@@ -5,7 +5,7 @@
    # - "apt update && apt install -y curl"
    # - "wget -q -O - https://workspaces-client-linux-public-key.s3-us-west-2.amazonaws.com/ADB332E7.asc | sudo apt-key add -"
    # - "echo 'deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu jammy main' | sudo tee /etc/apt/sources.list.d/amazon-workspaces-clients.list"
-   # - "apt update"
+    - "apt update"
    # - "apt install -y workspacesclient"
    # - "apt install -y fastfetch"
    # - "curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg"

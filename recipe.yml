@@ -24,11 +24,11 @@ stages:
   - name: dds-setup
     type: shell
     commands:
-    - "apt update && apt install -y curl"
-    - curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-    - "install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/"
-    - echo \deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main\ > /etc/apt/sources.list.d/microsoft-edge-dev.list
-    - "rm microsoft.gpg"
+   # - "apt update && apt install -y curl"
+   # - curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+   # - "install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/"
+   # - echo \deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main\ > /etc/apt/sources.list.d/microsoft-edge-dev.list
+   # - "rm microsoft.gpg"
     - "wget -q -O - https://workspaces-client-linux-public-key.s3-us-west-2.amazonaws.com/ADB332E7.asc | sudo apt-key add -"
    # - echo deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu jammy main | sudo tee /etc/apt/sources.list.d/amazon-workspaces-clients.list
    # - "apt update"

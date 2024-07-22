@@ -21,7 +21,6 @@ stages:
     - lpkg --unlock
     - apt-get update
     
-  modules:
   - name: dds-setup
     type: shell
     commands:

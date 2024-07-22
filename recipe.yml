@@ -34,8 +34,8 @@ stages:
     - "[ ! -f /etc/apt/ADB332E7.asc ] || mv /etc/apt/ADB332E7.asc /etc/apt/trusted.gpg.d"
     - echo "deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu jammy main" | tee /etc/apt/sources.list.d/amazon-workspaces-clients.list
     - "apt update"
-    - "apt install -y workspacesclient"
-   # - "apt install -y fastfetch"
+   # - "apt install -y workspacesclient"
+    - "apt install -y fastfetch"
    # - "apt install -y microsoft-edge-stable"
    # - "apt install -y intune-portal"
 

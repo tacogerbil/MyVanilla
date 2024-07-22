@@ -21,11 +21,11 @@ stages:
     - lpkg --unlock
     - apt-get update
 
-  # Put your custom actions behind this comment
-  #- name: dds # Sample module demonstrating importing local and remote modules
-  #  type: includes
-  #  includes:
-   #   - modules/02-dds.yml
+   Put your custom actions behind this comment
+  - name: dds # Sample module demonstrating importing local and remote modules
+    type: includes
+    includes:
+      - modules/02-dds.yml
 
   # Put your custom actions before this comment
 

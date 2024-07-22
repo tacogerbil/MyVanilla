@@ -38,7 +38,6 @@ stages:
     - "apt install -y fastfetch"
     - "apt install -y microsoft-edge-stable"
     - "apt install -y intune-portal"
-    - "chmod +x /usr/local/bin/updateme.sh"
 
   # Put your custom actions before this comment
 

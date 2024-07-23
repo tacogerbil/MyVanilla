@@ -23,7 +23,7 @@ stages:
     
   # Put your custom actions below this comment
     
-  - name: dds-setup01
+  - name: dds-setup_01
     type: shell
     commands:
     - apt-get install -y curl

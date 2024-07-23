@@ -22,16 +22,13 @@ stages:
     - apt-get update
     
   # Put your custom actions below this comment
-  
-  - name: dds-setup-aws-sources
-    type: shell    
-    - "wget -qO- https://workspaces-client-linux-public-key.s3-us-west-2.amazonaws.com/ADB332E7.asc | tee /etc/apt/trusted.gpg.d/myrepo.asc"
-    - "[ ! -f /etc/apt/ADB332E7.asc ] || mv /etc/apt/ADB332E7.asc /etc/apt/trusted.gpg.d"
-    - echo "deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu jammy main" | tee /etc/apt/sources.list.d/amazon-workspaces-clients.list
     
   - name: dds-setup_01
     type: shell
     commands:
+    - "wget -qO- https://workspaces-client-linux-public-key.s3-us-west-2.amazonaws.com/ADB332E7.asc | tee /etc/apt/trusted.gpg.d/myrepo.asc"
+    - "[ ! -f /etc/apt/ADB332E7.asc ] || mv /etc/apt/ADB332E7.asc /etc/apt/trusted.gpg.d"
+    - echo "deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu jammy main" | tee /etc/apt/sources.list.d/amazon-workspaces-clients.list
     - apt update
     - apt-get install -y curl
     - apt-get install -y fastfetch    

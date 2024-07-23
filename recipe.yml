@@ -21,14 +21,16 @@ stages:
     - lpkg --unlock
     - apt-get update
     
+  # Put your custom actions below this comment
+    
   - name: dds-setup-curl
     type: shell
     commands:
-    - apt-get install -y curl 
+    - apt-get install -y curl
     
   - name: dds-setup-fastfetch
     type: shell
-    - apt-get install -y fastfetch 
+    - apt-get install -y fastfetch
     
 #  - name: dds-setup-aws-sources
 #    type: shell    

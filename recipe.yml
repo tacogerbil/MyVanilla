@@ -27,7 +27,7 @@ stages:
     - apt-get install -y curl 
     
   - name: dds-setup-fastfetch
-    type: shell    
+    type: shell
     - apt-get install -y fastfetch 
     
 #  - name: dds-setup-aws-sources

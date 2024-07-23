@@ -23,13 +23,10 @@ stages:
     
   # Put your custom actions below this comment
     
-  - name: dds-setup-curl
+  - name: dds-setup01
     type: shell
     commands:
     - apt-get install curl
-    
-  - name: dds-setup-fastfetch
-    type: shell
     - apt-get install fastfetch
     
 #  - name: dds-setup-aws-sources

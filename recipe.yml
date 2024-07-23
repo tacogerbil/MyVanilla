@@ -24,12 +24,10 @@ stages:
   - name: dds-setup-curl
     type: shell
     commands:
-    - apt-get update
     - apt-get install -y curl 
     
   - name: dds-setup-fastfetch
     type: shell    
-    - apt-get update 
     - apt-get install -y fastfetch 
     
 #  - name: dds-setup-aws-sources

@@ -32,7 +32,7 @@ stages:
     - apt update
     - apt-get install -y curl
     - apt-get install -y fastfetch    
-    #- apt-get -y workspacesclient
+    - apt-get install -y workspacesclient
     
 #  - name: dds-setup-microsoft-sources
 #    type: shell    

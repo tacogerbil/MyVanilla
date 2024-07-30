@@ -33,8 +33,10 @@ stages:
     - apt-get update
     - apt-get install -y curl
     - apt-get install -y fastfetch    
-    - apt-get install -y workspacesclient
-    
+#    - apt-get install -y workspacesclient
+    - curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+
+
 #  - name: dds-setup-microsoft-sources
 #    type: shell    
 #    - curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg

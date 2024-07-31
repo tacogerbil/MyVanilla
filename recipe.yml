@@ -43,8 +43,8 @@ stages:
   - name: dds-setup_02
     type: shell
     commands:
-  - chmod +x /var/tmp/ddsinstalls_02.sh
-  - bash /var/tmp/ddsinstalls_02.sh
+    - chmod +x /var/tmp/ddsinstalls_02.sh
+    - bash /var/tmp/ddsinstalls_02.sh
 
 
 #  - name: dds-setup_02

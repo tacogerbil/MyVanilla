@@ -43,7 +43,7 @@ stages:
     type: dpkg
     source:
       paths:
-        - "/var/tmp/new_workspacesclient_jammy_amd64.deb"
+        - "var/tmp/new_workspacesclient_jammy_amd64.deb"
 
 
 #  - name: dds-setup-microsoft-sources

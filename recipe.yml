@@ -38,28 +38,36 @@ stages:
     - apt-get update
     - apt-get install -y curl
     - apt-get install -y fastfetch
+
     
   - name: dds-setup_02
     type: shell
-    commands:    
-    - chmod +x var/tmp/ddsinstalls_01.sh
-    - chmod +x var/tmp/ddsinstalls_02.sh
-    - chmod +x var/tmp/ddsinstalls_03.sh
+    commands:
+  - chmod +x /var/tmp/ddsinstalls_02.sh
+  - bash /var/tmp/ddsinstalls_02.sh
+
+
+#  - name: dds-setup_02
+#    type: shell
+#    commands:    
+#    - chmod +x var/tmp/ddsinstalls_01.sh
+#    - chmod +x var/tmp/ddsinstalls_02.sh
+#    - chmod +x var/tmp/ddsinstalls_03.sh
     
 #  - name: dds-setup_03
 #    type: shell
 #    commands:    
 #    - bash var/tmp/ddsinstalls_01.sh
     
-  - name: dds-setup_03
-    type: shell
-    commands:    
-    - bash var/tmp/ddsinstalls_02.sh
+#  - name: dds-setup_03
+#    type: shell
+#    commands:    
+#    - bash var/tmp/ddsinstalls_02.sh
     
-  - name: dds-setup_03
-    type: shell
-    commands:    
-    - bash var/tmp/ddsinstalls_03.sh
+#  - name: dds-setup_03
+#    type: shell
+#    commands:    
+#    - bash var/tmp/ddsinstalls_03.sh
 
 #  - name: my-deb
 #    type: dpkg

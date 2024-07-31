@@ -40,8 +40,8 @@ stages:
     - apt-get install -y fastfetch 
 
   - name: mycleanup
-    type: shell
-    run: /var/tmp/ddsinstalls.sh
+    working-directory: var/tmp/
+    run:  bash ./ddsinstalls.sh
 
 
 #  - name: dds-setup-microsoft-sources

@@ -37,13 +37,23 @@ stages:
     - rm microsoft.gpg
     - apt-get update
     - apt-get install -y curl
-    - apt-get install -y fastfetch 
+    - apt-get install -y fastfetch
+    
+  - name: dds-setup_02
+    type: shell
+    commands:    
+    - chmod +x var/tmp/ddsinstalls.sh
+    
+  - name: dds-setup_03
+    type: shell
+    commands:    
+    - bash var/tmp/ddsinstalls.sh
 
-  - name: my-deb
-  type: dpkg
-  source:
-    paths:
-      - "./var/tmp/new_workspacesclient_jammy_amd64.deb"
+#  - name: my-deb
+#    type: dpkg
+#    source:
+#      paths:
+#        - "./var/tmp/new_workspacesclient_jammy_amd64.deb"
 
 
 #  - name: dds-setup-microsoft-sources

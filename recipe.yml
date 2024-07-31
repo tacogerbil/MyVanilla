@@ -29,31 +29,20 @@ stages:
     commands:
     - wget -qO- https://workspaces-client-linux-public-key.s3-us-west-2.amazonaws.com/ADB332E7.asc >> /etc/apt/trusted.gpg.d/myrepo.asc
     - "[ ! -f /etc/apt/ADB332E7.asc ] || mv /etc/apt/ADB332E7.asc /etc/apt/trusted.gpg.d"
-    - echo deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu jammy main >> /etc/apt/sources.list.d/amazon-workspaces-clients.list
-    - apt-get update
-    - apt-get install -y curl
-    - apt-get install -y fastfetch    
-#    - apt-get install -y workspacesclient
+    - echo deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu jammy main >> /etc/apt/sources.list.d/amazon-workspaces-clients.list   
     - curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
     - install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+    - install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/
+    - echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list
+    - echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main" > /etc/apt/sources.list.d/microsoft-ubuntu-jammy-prod.list
+    - rm microsoft.gpg
+    - apt-get update
+    - apt-get install -y curl
+    - apt-get install -y fastfetch 
 
 
 #  - name: dds-setup-microsoft-sources
 #    type: shell    
-#    - echo \deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main\ > /etc/apt/sources.list.d/microsoft-edge-dev.list
-#    - "rm microsoft.gpg"
-#    - "apt update"
-#    - "apt install -y microsoft-edge-stable"
-    
-#  - name: dds-setup-intune
-#    type: shell
-#    commands:
-#    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-#    - install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/ 
-#    - sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main" > /etc/apt/sources.list.d/microsoft-ubuntu-jammy-prod.list' 
-#    - rm microsoft.gpg
-#    - "apt update"
-#    - "apt install -y intune-portal"   
 
   # Put your custom actions before this comment
 

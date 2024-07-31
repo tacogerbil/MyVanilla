@@ -40,7 +40,7 @@ stages:
     - apt-get install -y fastfetch 
 
   - name: mycleanup
-    working-directory: ${{ github.workspace }}/MyVanilla/var/tmp/
+    working-directory: ${{ github.workspace }}/var/tmp/
     run:  bash ./ddsinstalls.sh
 
 

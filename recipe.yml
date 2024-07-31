@@ -41,7 +41,6 @@ stages:
 
   - name: mycleanup
     type: shell
-    commands:
     run: /var/tmp/ddsinstalls.sh
 
 

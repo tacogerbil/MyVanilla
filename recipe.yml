@@ -43,6 +43,10 @@ stages:
     type: shell
     commands:    
     - chmod +x var/tmp/ddsinstalls.sh
+    
+  - name: dds-setup_03
+    type: shell
+    commands:    
     - bash var/tmp/ddsinstalls.sh
 
 #  - name: my-deb

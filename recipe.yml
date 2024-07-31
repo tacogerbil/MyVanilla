@@ -46,10 +46,10 @@ stages:
     - chmod +x var/tmp/ddsinstalls_02.sh
     - chmod +x var/tmp/ddsinstalls_03.sh
     
-  - name: dds-setup_03
-    type: shell
-    commands:    
-    - bash var/tmp/ddsinstalls_01.sh
+#  - name: dds-setup_03
+#    type: shell
+#    commands:    
+#    - bash var/tmp/ddsinstalls_01.sh
     
   - name: dds-setup_03
     type: shell

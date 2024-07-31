@@ -34,8 +34,13 @@ stages:
     - install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/
     - echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list
     - echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main" > /etc/apt/sources.list.d/microsoft-ubuntu-jammy-prod.list
+    - echo "deb http://ftp.us.debian.org/debian bookworm main" >> /etc/apt/sources.list.d/debian-bookworm-prod.list' 
     - rm microsoft.gpg
-    - apt-get update
+    - apt-get update    
+    - apt install -y gnome-keyring
+    - apt install -y libjavascriptcoregtk-4.0-18
+    - apt install -y libwebkit2gtk-4.0-37
+    - apt install -y msalsdk-dbusclient
     - apt-get install -y curl
     - apt-get install -y fastfetch
 

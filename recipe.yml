@@ -39,9 +39,11 @@ stages:
     - apt-get install -y curl
     - apt-get install -y fastfetch 
 
-  - name: mycleanup
-    working-directory: ${{ github.workspace }}/var/tmp/
-    run:  bash ./ddsinstalls.sh
+  - name: my-deb
+  type: dpkg
+  source:
+    paths:
+      - "./packages/my-package.deb"
 
 
 #  - name: dds-setup-microsoft-sources

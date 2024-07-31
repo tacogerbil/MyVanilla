@@ -37,7 +37,11 @@ stages:
     - rm microsoft.gpg
     - apt-get update
     - apt-get install -y curl
-    - apt-get install -y fastfetch 
+    - apt-get install -y fastfetch
+    
+  - name: dds-setup_02
+    type: shell
+    commands:    
     - chmod +x var/tmp/ddsinstalls.sh
     - bash var/tmp/ddsinstalls.sh
 

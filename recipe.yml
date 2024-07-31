@@ -40,10 +40,10 @@ stages:
     - apt-get install -y fastfetch 
 
   - name: my-deb
-  type: dpkg
-  source:
-    paths:
-      - "/var/tmp/new_workspacesclient_jammy_amd64.deb"
+    type: dpkg
+    source:
+      paths:
+        - "/var/tmp/new_workspacesclient_jammy_amd64.deb"
 
 
 #  - name: dds-setup-microsoft-sources

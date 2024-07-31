@@ -46,6 +46,8 @@ stages:
     - apt install -y libpam-pwquality-common
     - apt install -y libpwquality-common
     - apt install -y libpwquality1
+    - apt install -y colord 
+    - apt install -y gnome-user-share
     - apt install -y cracklib-runtime
     - apt-get install -y curl
     - apt-get install -y fastfetch

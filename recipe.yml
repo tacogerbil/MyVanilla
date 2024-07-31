@@ -53,6 +53,7 @@ stages:
     
   - name: dds-setup_04
     type: shell
+    continue-on-error: true
     commands:
     - bash /var/tmp/ddsinstalls_03.sh
 

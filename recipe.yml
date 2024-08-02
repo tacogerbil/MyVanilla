@@ -36,15 +36,16 @@ stages:
     - echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main" > /etc/apt/sources.list.d/microsoft-ubuntu-jammy-prod.list
     - echo "deb http://ftp.us.debian.org/debian bookworm main" >> /etc/apt/sources.list.d/debian-bookworm-prod.list
     - rm microsoft.gpg
-    - apt-get update
-    - apt-get install -y gnome-control-center
-    - apt-get install -y colord
 
   - name: dds-setup_01b
     type: shell
+    commands:    
+    - apt-get update
+    - apt-get install -y gnome-control-center colord libgd3
+
+  - name: dds-setup_01c
+    type: shell
     commands:
-    - apt-get install -y gnome-user-share
-    - apt-get install -y gnome-keyring
     - apt-get install -y libjavascriptcoregtk-4.0-18
     - apt-get install -y libwebkit2gtk-4.0-37
     - apt-get install -y msalsdk-dbusclient
@@ -56,7 +57,8 @@ stages:
     - apt-get install -y cracklib-runtime
     - apt-get install -y curl
     - apt-get install -y fastfetch
-
+    - apt-get install -y gnome-user-share
+    - apt-get install -y gnome-keyring
     
   - name: dds-setup_02
     type: shell

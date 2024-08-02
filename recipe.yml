@@ -38,6 +38,10 @@ stages:
     - rm microsoft.gpg
     - apt-get update    
     - apt install -y colord
+
+  - name: dds-setup_01b
+    type: shell
+    commands:
     - apt install -y gnome-user-share
     - apt install -y gnome-keyring
     - apt install -y libjavascriptcoregtk-4.0-18

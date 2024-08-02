@@ -41,7 +41,7 @@ stages:
     type: shell
     commands:    
     - apt-get update
-    - apt-get install -y gnome-control-center colord libgd3
+    - apt-get install -y gnome-control-center
 
   - name: dds-setup_01c
     type: shell

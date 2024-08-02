@@ -60,17 +60,8 @@ stages:
     type: shell
     commands:
     - chmod +x /var/tmp/ms_installs.sh
-    #- bash /var/tmp/ms_installs.sh
-    
-  - name: dds-setup_03
-    type: shell
-    commands:
     - chmod +x /var/tmp/ws_install.sh
-    
-  - name: dds-setup_04
-    type: shell
-    continue-on-error: true
-    commands:
+    #- bash /var/tmp/ms_installs.sh
     #- bash /var/tmp/ws_install.sh
 
 
